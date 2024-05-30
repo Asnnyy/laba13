@@ -20,7 +20,7 @@ def z1():
         params = {'APPID': key, 'q': city, 'units': 'metric'}
         res = requests.get(s, params=params)
         t = res.json()
-        info['text'] = f'{t['main']['t_m']}'
+        info['text'] = f'{t['main']['temp_max']}'
 
     frame = Frame(root, bg='cornflower blue', bd=4)
     frame.place(relx=0.15, rely=0.09, relwidth=0.7, relheight=0.7)
